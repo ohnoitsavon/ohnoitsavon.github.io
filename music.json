@@ -1,0 +1,33 @@
+{
+   "data": [
+	  {
+      	 "image": "images/covers/idk.jpg",
+         "name": "I Don't Know EP",
+         "date": "October 2, 2013",
+         "col": "#ff9900",
+         "bclink": "",
+         "splink": "",
+         "itlink": "",
+         "gplink": "",
+         "sclink": "https://soundcloud.com/ohnoitsavon/sets/i-dont-know-ep",
+         "rvlink": "https://www.reverbnation.com/3033231/album/174667",
+         "tracks": [
+         	{
+         		"tname": "A Song About Me​"
+         	},
+			{
+         		"tname": " Keep Calm And Watch Out"
+         	},
+			{
+         		"tname": "IDK​"
+         	},
+			{
+         		"tname": "Why I Shouldn't Write A Song About You"
+         	},
+         	{
+         		"tname": "IDK (Acoustic)"
+         	}
+         ]
+      }
+   ]
+}
