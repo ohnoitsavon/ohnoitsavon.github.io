@@ -97,13 +97,29 @@ padding: 0 0 1rem 0;
 
 #main img
 {
-	max-width:483px;
 	width:100%;
+}
+
+#main .helpimg
+{
+	width:100%;
+	padding: 0 0 1em 0;
 }
 
 #main .menu
 {
 	padding: 0 0 0 40px;
+}
+
+#main .menu-ol
+{
+	padding: 0 0 0 40px;
+}
+
+
+#main .menu-ol li
+{
+	padding: 0.5em 0;
 }
 
 #main table
