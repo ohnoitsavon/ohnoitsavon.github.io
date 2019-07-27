@@ -295,12 +295,15 @@ h2{
 
 #AboutC div
 {
+	width:90%;
 	max-width:830px;
 	margin:0 auto;
 }
 
 #ProjectsC div
 {
+	
+	width:90%;
 	max-width:830px;
 	margin:0 auto;
 }
@@ -318,6 +321,7 @@ h2{
 
 #ProductionC
 {
+	width:90%;
 	max-width:830px;
 	margin:0 auto;
 }
@@ -375,7 +379,7 @@ h2{
 	text-align:center;
 }
 
-@media screen and (max-width : 900px){
+@media screen and (max-width : 950px){
 #prodeg
 {	
 	margin: 0 auto;
@@ -399,29 +403,15 @@ h2{
 
 @media screen and (max-width : 450px){
 #prodeg
-{	
-	margin: 0 auto;
+{		max-width:100%;
 }
 .prodimg
 {
-	max-width:100%;
-	margin:0;
-}
-.prodimg.nomargin
-{
-	margin:0;
-}
-.prodimg.nomargin2
-{
-	margin:0;
+	max-width:45%;
+	font-size:105%;
+	line-height: 110%;
 }
 
-.prodimg a img
-{
-	width:45%;
-	display:block;
-	margin:0 auto;
-}
 }
 
 #PhotosC, #MusicC, #VideosC, #ContactC
