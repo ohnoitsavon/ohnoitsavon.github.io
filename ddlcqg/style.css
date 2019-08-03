@@ -32,6 +32,7 @@ time, mark, audio, video {
 html {
 	height:100%;
 	background-color: #000000;
+	overflow-y: scroll; 
 }
 
 body { 
@@ -67,13 +68,46 @@ i {
 	padding:0 3px 0 0px;
 }
 
-a:hover{
-	opacity: 0.6;
+b {
+	font-weight: bold;
 }
 
-.ddlccheckbox
+a:hover{
+	opacity: 0.8;
+}
+
+.checkb
 {
-	margin: 0 0 0 0;
+	width: 15px;
+	border-radius:5px;
+	display: inline;
+	vertical-align: middle;
+	margin: 0 0 0 5px;
+	padding: 2px 2px 1px 2px;
+	line-height: 10px;
+	background: #fff;
+	
+}
+
+.active
+{
+	border: solid 2px #4F2E3D;
+}
+
+.inactive
+{
+	border: solid 2px #222222;
+	color:fff;
+	text-shadow:none;
+}
+
+.dropdown
+{
+	padding: 0;
+	height: 20px;
+	display: inline;
+	margin: -3px 0 0 5px;
+	vertical-align: middle;
 }
 
 #bg
@@ -117,7 +151,7 @@ a:hover{
 
 #innertop
 {	
-	margin: 70px 0 10px 125px;
+	margin: 0 0 0 125px;
 }
 
 #toplogo
@@ -135,6 +169,8 @@ a:hover{
 	z-index: 999;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 10px 5px 10px 0;
+	line-height:20px;
 }
 
 .textl
@@ -145,6 +181,11 @@ a:hover{
 .textr
 {
 	text-align:right;
+}
+
+.textc
+{
+	text-align:center;
 }
 
 #ddlc
@@ -683,7 +724,7 @@ a:hover{
 {
 	display:inline-block;
 	padding:10px;
-	border-radius: 10px;
+	border-radius: 10px; 
 	font-family: namebox, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	letter-spacing: 0.08em;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
