@@ -1207,14 +1207,14 @@ b {
 }
 }
 
-@media screen and (max-width :390px){
+@media screen and (max-width :400px){
 .mintext2
 {
 	display:none;
 }
 .inner3
 {
-	max-width:76px;
+	max-width:72px;
 }
 #moreoptions
 {
@@ -1260,9 +1260,9 @@ b {
 }
 }
 
-@media screen and (max-width :300px){
-html, #top, #buttonstop
+@media screen and (max-width :310px){
+html, #top, #buttonstop, #moreoptions
 {
-	width:300px;
+	width:310px;
 }
 }
