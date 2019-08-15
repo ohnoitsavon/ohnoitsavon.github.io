@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta property="og:type"               content="website" />
+  <title>Bulk URL Image Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Bulk URL Image Downloader</h1>
+<p>Enter the URL with [RANGE] in place of the desired number range. Then save this page as "Webpage, Complete".</p>
+<form id="dlForm">
+<p>URL: <input type="text" id="URL" style="width:100%; max-width:550px;" value="https://exampleurl/[RANGE].jpg"></p>
+<p>RANGE START: <input id="RSTART" type="text" value="1"></p>
+<p>RANGE END: <input id="REND" type="text" value="10"></p>
+<input id="DL" type="button" value="Download">
+<div id="IMAGES"></div>
+</form>
+<script>
+
+document.getElementById("DL").addEventListener("click", dlFunction);
+
+function dlFunction() {
+  
+  var zone = document.getElementById("IMAGES");
+  zone.innerHTML = "";
+  var regex = /\[RANGE\]/gi;
+  
+  for (i = document.getElementById("RSTART").value; i <= document.getElementById("REND").value; i++) {
+	var p = document.getElementById("URL").value; 
+	var tempfile = p.replace(regex, i);
+	var image = document.createElement('img');
+	zone.appendChild(image);
+    image.setAttribute('src', tempfile);
+  }  
+  
+  alert("Download Complete - Now save this page as \"Webpage, Complete\".");
+  return false;
+}
+</script>
+
+</body>
+</html>

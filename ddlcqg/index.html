@@ -24,22 +24,38 @@
 <body>
 <div id="bg" class="fullopacity"></div>
 <div id="top">
-	<img id="toplogo" src="images/logo.png">
-	<div id="innertop">
-		<a class="inner ddlcclassictext" id="genDDLC">Generate Quote</a>
-		<a class="inner ddlcclassictext" id="clearDDLC">Clear Quotes</a>		
-		<a class="inner ddlcclassictext" id="flipBtn">Text Align<div id="flipBox" class="checkb active">&check;</div></a>
-		<a class="inner ddlcclassictext" id="colBtn">Custom Colours<div id="colBox" class="checkb active">&check;</div></a>
-		<span class="inner ddlcclassictext">Choose Act:
-		<select id="DDact" class="dropdown">
-		  <option value="A">All Acts</option>
-		  <option value="1">Act 1</option>
-		  <option value="2">Act 2</option>
-		  <option value="3">Act 3</option>
-		  <option value="4">Act 4</option>
-		</select> 
+	<img id="toplogo" src="images/logo-small.png">
+	<div id="buttonstop">
+	<img id="toplogo-small" src="images/logo-small.png">
+	<span id="blockA" class="inner2">
+		<a class="inner ddlcclassictext" id="genDDLC">Random Quote</a>
+		<a class="inner ddlcclassictext" id="nextDDLC">Next<span class="mintext"> Quote</span></a>
+		<a class="inner ddlcclassictext" id="clearDDLC">Clear<span class="mintext"> Quote</span></a>
+	</span>
+	<span id="blockB" class="inner2">
+		<input type="text" class="inner5" id="inSearch" value="Monika">
+		<span class="inner4"><a class="inneralt ddlcclassictext" id="serDDLC">Search</a></span>
+	</span>
+	<span id="blockC" class="inner2">
+		<a class="inner ddlcclassictext show" id="moreDDLC"><span class="mintext">Show </span>Options</a>
+		<a class="inner ddlcclassictext" id="aboutDDLC">About</a>
+	</span>
+	<span id="moreoptions" class="inner2 show2">	
+		<span class="inner4">
+			<span class="inneralt ddlcclassictext"><span class="mintext2">Choose </span>Act:</span>
+			<select id="DDact" class="dropdown">
+				<option value="A">All Acts</option>
+				<option value="1">Act 1</option>
+				<option value="2">Act 2</option>
+				<option value="3">Act 3</option>
+				<option value="4">Act 4</option>
+			</select> 
 		</span>
-		
+		<a class="inner ddlcclassictext" id="flipBtn">Text Align<div id="flipBox" class="checkb active">&check;</div></a>
+		<a class="inner ddlcclassictext" id="colBtn">Doki Colours<div id="colBox" class="checkb active">&check;</div></a>
+		<span class="inner4"><span class="inneralt ddlcclassictext">MC Name:</span><input class="inner3" type="text" id="inMCname" value="MC"></span>
+	</span>
+	<div id="closeoptions" class="hidden"><a class="inner ddlcclassictext topright">Close <span style="font-size:200%; line-height:20px; vertical-align: middle;">&times;</span></a></div>
 	</div>
 </div>
 <div id="pad"></div>

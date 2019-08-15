@@ -9,6 +9,8 @@ var searcharray = [];
 
 var mcvar = "MC"
 
+var crusr = "The Player"
+
 var lastquote = -1;
 var lastact = "act1";
 
@@ -47,32 +49,33 @@ $.getJSON("ddlc.json", function(data) {
 		var textcolbtn = document.getElementById("colBtn");
 		var textcolbox = document.getElementById("colBox");
 		var ddact = document.getElementById("DDact");
-		
-		mcvar = "MC"
+		var inMC = document.getElementById("inMCname");
+		var inSearch = document.getElementById("inSearch");
 		
 		var a = document.getElementById("genDDLC");
 		a.onclick = function(){
 			document.getElementById("bg").className = "cutopacity";
 			selact = ddact.options[ddact.selectedIndex].value;
+			mcvar = inMC.value
 			quote(selact,"RAND",1);
-			/*quote(V1,V2,V3);
-			quote("2","S",1);
-			quote("2","Y",1);
-			quote("2","N",1);
-			quote("2","M",1);
-			quote("2","MC",1);
-			quote("2","NY",1);
-			quote("2","TXT",1);
-			quote("2","RAND",1);
-			quote("2","ORD",2);
-			quote("1",96,1);
-			quote("1",9999996,1);
-			quote("A",9999996,1);
-			quote("3","dave",5);
-			quote("A","TEST",5);
-			quote("1","poem",5);
-			quote("A","error",5);
-			quote("A","TkVQ",10);*/
+			return false;
+		}
+		
+		var a = document.getElementById("nextDDLC");
+		a.onclick = function(){
+			document.getElementById("bg").className = "cutopacity";
+			selact = ddact.options[ddact.selectedIndex].value;
+			mcvar = inMC.value
+			quote(selact,"ORD",1);
+			return false;
+		}
+		
+		var a = document.getElementById("serDDLC");
+		a.onclick = function(){
+			document.getElementById("bg").className = "cutopacity";
+			selact = ddact.options[ddact.selectedIndex].value;
+			mcvar = inMC.value
+			quote(selact,inSearch.value,1);
 			return false;
 		}
 		
@@ -82,15 +85,35 @@ $.getJSON("ddlc.json", function(data) {
 			document.getElementById("bg").className = "fullopacity";
 			setside = "textr";
 			namesave = "START";			
-		return false;
+			return false;
 		}
-				
+			
+		var a = document.getElementById("aboutDDLC");
+		a.onclick = function(){
+			document.getElementById("bg").className = "cutopacity";
+			$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname ddlcERRORname\">About:</span><br><span class=\"ddlctext ddlcJUSTtext\">Hi, welcome to the DDLC Quote Generator! - created by <a href=\"https://www.ohnoitsAvon.co.uk\" target=\"_blank\">ohnoitsAvon</a><br><br>This website lets you generate random quotes from DDLC. It also lets you search for your favourite quotes.<br><br>With this tool you can:<br><br>Generate random quotes<br>Get the next quote (in order)<br>Search for quotes by Character, word or phrase<br>Choose the act to get quotes from<br>Change the name of the MC<br>Turn on or off custom colours<br>Enable or disable automatic text alignment.<br><br>Searching for the character names will display quotes from the chosen character:<br>Sayori, Natsuki, Yuri, Monika, MC,<br>or TXT for the narrator text.<br><br>If you would like to search for a quote that mentions the character add a / before the name:<br>e.g. /Monika<br><br>This is a Doki Doki Literature Club fan made utility that is not affiliated with Team Salvato.<br>It is designed to be used only after the official game has been completed.<br>You can download Doki Doki Literature Club at: <a href=\"http://ddlc.moe\" target=\"_blank\">http://ddlc.moe</a><br><br>Click \"Random Quote\" to get started.</span></p>")
+			return false;
+		}
+			
+		a.click();
+		
+		var a = document.getElementById("moreDDLC");
+		a.onclick = function(){
+			document.getElementById("closeoptions").className = "show";	
+			document.getElementById("moreoptions").className = "inner2 hidden2";	
+		}
+		
+		var a = document.getElementById("closeoptions");
+		a.onclick = function(){
+			document.getElementById("closeoptions").className = "hidden";	
+			document.getElementById("moreoptions").className = "inner2 show2";	
+		}
 		
 		fbtn.onclick = function() {
 			if (textflip == 1)
 			{
 				textflip = 0;					
-				fbtn.className = "inner ddlcJUSTtext";	
+				fbtn.className = "inner clicked ddlcJUSTtext";	
 				fbox.className = "checkb inactive";				
 			}
 			else
@@ -107,7 +130,7 @@ $.getJSON("ddlc.json", function(data) {
 			if (chartextcols == 1)
 			{
 				chartextcols = 0;				
-				textcolbtn.className = "inner ddlcJUSTtext";	
+				textcolbtn.className = "inner clicked ddlcJUSTtext";	
 				textcolbox.className = "checkb inactive";					
 			}
 			else
@@ -174,9 +197,21 @@ function quote(act, chr, length) {
 			}	
 		}	
 			
-		switch (chr) {
+		switch (chr.toUpperCase()) {
 		  case "ORD":
-		  
+		    
+			switch (lastact) {
+			case "act1":
+			case "act2":
+			case "act3":
+			case "act4":
+			case "EEDISCORD":
+			break;
+			default:
+				lastact = "act1";
+				lastquote = -1;
+			}	
+			
 			do {
 			  var breakout = 0;
 				lastquote = lastquote + 1; 
@@ -197,8 +232,13 @@ function quote(act, chr, length) {
 						lastquote = 0;
 						break;
 					case "act4":
-						lastact = "actP";
+						lastact = "act1";
 						lastquote = 0;
+						break;
+					default:
+						lastact = "act1";
+						lastquote = 0;
+						break;
 					}	
 				}
 				
@@ -234,6 +274,7 @@ function quote(act, chr, length) {
 			typequote(tempact, quoteno);
 			break;
 		  case "S":
+		  case "SAYORI":
  		    do {
 			  var breakout = 0;
 			  quoteno = getRandomInt(ddlcarray[0][tempact].length);
@@ -243,7 +284,11 @@ function quote(act, chr, length) {
 			    if (randact == 1) {
 					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
 					{
-						breakout = 1
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
 					}
 				}
 				else {
@@ -255,6 +300,7 @@ function quote(act, chr, length) {
 			typequote(tempact, quoteno);
 			break;
 		  case "Y":
+		  case "YURI":
 			do {
 			  var breakout = 0;
 			  quoteno = getRandomInt(ddlcarray[0][tempact].length);
@@ -264,7 +310,11 @@ function quote(act, chr, length) {
 			    if (randact == 1) {
 					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
 					{
-						breakout = 1
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
 					}
 				}
 				else {
@@ -276,6 +326,7 @@ function quote(act, chr, length) {
 			typequote(tempact, quoteno);
 			break;
 		  case "N":
+		  case "NATSUKI":
 		    do {
 			  var breakout = 0;
 			  quoteno = getRandomInt(ddlcarray[0][tempact].length);
@@ -285,7 +336,11 @@ function quote(act, chr, length) {
 			    if (randact == 1) {
 					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
 					{
-						breakout = 1
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
 					}
 				}
 				else {
@@ -297,6 +352,7 @@ function quote(act, chr, length) {
 			typequote(tempact, quoteno);
 			break;
 		  case "M":
+		  case "MONIKA":
 			do {
 			  var breakout = 0;
 			  quoteno = getRandomInt(ddlcarray[0][tempact].length);
@@ -310,6 +366,7 @@ function quote(act, chr, length) {
 			typequote(tempact, quoteno);
 			break;
 		  case "NY":
+		  case "NATSUKI & YURI":
 			do {
 			  var breakout = 0;
 			  quoteno = getRandomInt(ddlcarray[0][tempact].length);
@@ -319,7 +376,11 @@ function quote(act, chr, length) {
 			    if (randact == 1) {
 					if (ddlcarray[0][tempact][quoteno].substr(2) != "We dont speak together in this act!") 
 					{
-						breakout = 1
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
 					}
 				}
 				else {
@@ -340,7 +401,11 @@ function quote(act, chr, length) {
 			    if (randact == 1) {
 					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
 					{
-						breakout = 1
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
 					}
 				}
 				else {
@@ -390,36 +455,10 @@ function quote(act, chr, length) {
 				}
 				else
 				{
-					if (chr == "TkVQ")
-					{
-						namestyle = "ddlcYname"
-						textstyle = "ddlcYtext";
-						neptext = "";
-						neprandquote = getRandomInt(5);
-						switch (neprandquote) {
-						  case 0:
-							neptext = "Nep, Nep Nep Nep Nep Nep Nep, Nep Nep.";
-							break;
-						  case 1:
-							neptext = "I'll Nep your face!";
-							break;
-						  case 2:
-							neptext = "A wild Neptune appears!";
-							break;
-						  case 3:
-							neptext = "Puddiiiiiiiiing! If I don't have any pudding, I'll die! Puddiiiiing!";
-							break;
-						  case 4:
-							neptext = "Hey, wait a sec... this isn't my game...";
-						}
-						$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">Neptune:</span><br><span class=\"ddlctext "+textstyle+"\">\""+neptext+"\"</span></p>");
-					}
-					else
-					{
 					namestyle = "ddlcERRORname";
 					textstyle = "ddlcJUSTtext";
-					$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">\"An exception has occurred. Unable to find any quotes matching \""+chr+"\" - Please try another word or phrase.\"</span></p>");
-					}
+					$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">An exception has occurred. Unable to find any quotes matching \""+chr+"\" - Please try another word or phrase.</span></p>");
+					
 					length = 1;	
 				}
 				
@@ -452,7 +491,7 @@ function quote(act, chr, length) {
 							default:
 								namestyle = "ddlcERRORname";
 								textstyle = "ddlcJUSTtext";
-								$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">\"An exception has occurred. Selected quote is out of range - Please select another number.\"</span></p>");
+								$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">An exception has occurred. Selected quote is out of range - Please select another number.</span></p>");
 								length = 1;	
 								break;
 						}
@@ -467,7 +506,7 @@ function quote(act, chr, length) {
 						{
 							namestyle = "ddlcERRORname";
 							textstyle = "ddlcJUSTtext";
-							$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">\"An exception has occurred. Selected quote is out of range - Please select another number.\"</span></p>");
+							$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">An exception has occurred. Selected quote is out of range - Please select another number.</span></p>");
 							length = 1;	
 						}
 					}
@@ -476,7 +515,7 @@ function quote(act, chr, length) {
 				{
 					namestyle = "ddlcERRORname";
 					textstyle = "ddlcJUSTtext";
-					$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">\"An exception has occurred. Selected quote is out of range - Please select another number.\"</span></p>");
+					$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname "+namestyle+"\">ERROR:</span><br><span class=\"ddlctext "+textstyle+"\">An exception has occurred. Unable to retrieve quote - Please try again.</span></p>");
 					length = 1;	
 				}
 			}
@@ -486,12 +525,11 @@ function quote(act, chr, length) {
 	window.scrollTo(0,document.body.scrollHeight);
 }
 
-function searchquote(chr,searchact) {
+function searchquote(chr,searchact) {	
 	
 	upsearch = chr.toUpperCase();
 	var regtext = new RegExp(/[^A-Za-z0-9 ÉÀ]/g);
-	upsearch = upsearch.replace(regtext,"");
-				
+	upsearch = upsearch.replace(regtext,"");	
 	
 	for (j = 0; j < ddlcarray[0][searchact].length; j++) 
 	{
@@ -521,6 +559,48 @@ function searchquote(chr,searchact) {
 				searcharray.push([searchact,j]);
 			}
 		}
+		if (chr.includes(crusr))
+		{
+			namesearch = crusr
+			namesearch = namesearch.replace(crusr,"$currentuser");
+			namesearch = namesearch.toUpperCase();
+			namesearch = namesearch.replace(regtext,"");							
+			if (tempstr.includes(namesearch))
+			{
+				searcharray.push([searchact,j]);
+			}
+		}
+	}
+	
+	switch(true)
+	{
+		case (chr == "STwzTkVQ"):
+			for (j = 0; j < ddlcarray[0]["EEAB"].length; j++) 
+			{
+			//I<3NEP*
+			searcharray.push(["EENEP",j]);	
+			}
+		break;
+		case (upsearch.includes("AVON")):
+			for (j = 0; j < ddlcarray[0]["EEAB"].length; j++) 
+			{
+			searcharray.push(["EEAB",j]);		
+			}
+		break;
+		case (upsearch == "CEASER"):
+			for (j = 0; j < ddlcarray[0]["EEC"].length; j++) 
+			{
+			searcharray.push(["EEC",j]);		
+			}
+		break;
+		case (upsearch == "CEASER MADRAZO DISCORD"):
+			for (j = 0; j < ddlcarray[0]["EEAB"].length; j++) 
+			{
+			searcharray.push(["EEDISCORD",j]);	
+			}
+		break;
+		
+		
 	}
 	
 }	
@@ -587,6 +667,40 @@ function typequote(choiceact, qn){
 			{
 				textstyle = "ddlcJUSTtext";
 			}
+			break;
+		  case "H":
+			name = "Neptune"
+			if (chartextcols == 1)
+			{
+				namestyle = "ddlcYname";
+				textstyle = "ddlcYtext";
+			}
+			break;
+		  case "A":
+			name = "Avon"
+			if (chartextcols == 1)
+			{
+				namestyle = "ddlcORname";
+				textstyle = "ddlcORtext";
+			}
+			break;
+		  case "C":
+			name = "Ceaser"
+			if (chartextcols == 1)
+			{
+				namestyle = "ddlcBname";
+				textstyle = "ddlcBtext";
+			}
+			break;
+		  case "R":
+			name = "xRakanHD"
+			if (chartextcols == 1)
+			{
+				namestyle = "ddlcclassicname";
+				textstyle = "ddlcclassictext";
+			}
+			break;
+				
 		}
 		
 		if (textflip == 1)
@@ -611,6 +725,7 @@ function typequote(choiceact, qn){
 		
 		var displaytext = ddlcarray[0][choiceact][qn].substr(2)
 		var displaytext = displaytext.replace(/\$MC/g, mcvar);
+		var displaytext = displaytext.replace(/\$currentuser/g, crusr);
 		
 		if (name.length > 0) 
 		{
