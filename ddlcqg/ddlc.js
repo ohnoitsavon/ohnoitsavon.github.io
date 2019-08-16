@@ -263,9 +263,35 @@ function quote(act, chr, length) {
 			  
 				switch (ddlcarray[0][tempact][quoteno].substr(2)) {
 				  case "Sorry, I'm not in this act...":
-					break;
 				  case "We dont speak together in this act!":
-					break;
+				  case "Ĺý¼¹ŨļŏĬÏŸŗ°ĥŚěĲÝĂō¯ÀœÀņŢŴūĶŲĠşı¦¾ŋũ´À¥¸¢ĢļĎźũÝĸŌŞţëġŁŐÂÉĤĐ·ċ": 		//s
+				  case "ÔŭÐŠÒĝĒåŹóÑÿŖĦºūůŜ¤ÍŝŽÛìĎũ½ÅµþĞÎŴġäĭ³®ŭÒ§ĵů£ţćŽďųŮğŖĦĴŀį·ųþğâ":			//s
+				  case "ÕóŊ¦ªĘąŷÞÈÿûůœŅŐÁ°¼Ġ¯ÊŋÁ¹Ŏ·£èğČŦĴ³Ðå¢ŞħźšŎŤëÈĉ°±ĻéĀõ÷Àľć¤¦čĮĦ":			//s
+				  case "£ŨşğŗōŖýũ¾ŨĥŋćÝÏţĂįŖěŏ¯¦ĶļņŸďÀųğŢþŴĬ·ļ¹ŚÀĴœųŖŮūĦŲŗ°ŽĬıŀĠĹŸŏ¹¼âÏĲ":  //n
+				  case "þūĶ¦ŏļÏŚŗÝœÏ¹ŖćĥĴŨĬŮĲōįŲ¯ıŀŗŨŸŖ¾ţļņğýŸ·ŢĬŋĠğě¹Ŵũųâ°ųďŽŏŖ¼şĹĦÀĂ£À":  //n
+				  case "T3BlbiBZb3VyIFRoaXJkIEV5ZQ==":			//n
+				  case "SSBjYW4gZmVlbCB0aGUgdGVuZGVybmVz":      //n
+				  case "cyBvZiBoZXIgc2tpbiB0aHJvdWdoIHRo":      //n
+				  case "ZSBrbmlmZSwgYXMgaWYgaXQgd2VyZSBh":      //n
+				  case "biBleHRlbnNpb24gb2YgbXkgc2Vuc2Ug":      //n
+				  case "b2YgdG91Y2guIE15IGJvZHkgbmVhcmx5":      //n
+				  case "IGNvbnZ1bHNlcy4gVGhlcmUncyBzb21l":      //n
+				  case "dGhpbmcgaW5jcmVkaWJseSBmYWludCwg":      //n
+				  case "ZGVlcCBkb3duLCB0aGF0IHNjcmVhbXMg":      //n
+				  case "dG8gcmVzaXN0IHRoaXMgdW5jb250cm9s":      //n
+				  case "bGFibGUgcGxlYXN1cmUuIEJ1dCBJIGNh":      //n
+				  case "biBhbHJlYWR5IHRlbGwgdGhhdCBJJ20g":      //n
+				  case "YmVpbmcgcHVzaGVkIG92ZXIgdGhlIGVk":      //n
+				  case "Z2UuIEkgY2FuJ3QuLi5JIGNhbid0IHN0":      //n
+				  case "b3AgbXlzZWxmLg==":                      //n
+				  case "ýĹğŖþŀ£ŢįâĴŚŖŨţųŋıŨŽņÀďŸÀ¦ćěĬļ¾ş°ŮŏŲō¹ĬļÏųĲŸūĠŗŖ·ŴĦĂÏŗũŏ¼¹ğœĶÝ¯ĥ": //y
+				  case "ō·ļĲ¼Ġ¯ŸļŮŢćĬğŨŗŋŗœŴũĶŖņŲŚŖÏŀŨūýĂų¾Ýď¹ĬÏŏþĥŸěŽųğĦĴÀ£â°Ŗį¹ş¦ÀţĹıŏ": //y
+				  case "ŏŽ¦ŀĥųūųĲŗŲŸļŨŴŖŗŨŏĂũş·ŖœŋļņğŸ¼ćĬ¹ě£ÀÀĹį¹ÏĬýōĶ¯ŖğâĦĠÝÏţŚþďı¾°ŢĴŮ": //y
+				  case "Ï¹ÀŏŚÀýĶŖþğŨÝŋįěğĴ·ųŗŏ¯ŮņĬÏĥŗŲĲţōŢŸćŴâũĦŖœļŽĬŨŸ¾ŀşĠĂı¼¹ĹŖū°ļų¦ď£": //-
+				  case "ĬÏŸŗğŖĦĴŀį¯ÀœÀņŢŴūĶŲĠşıćŽ·ųþŖĹý¼¹Ũļŏ°ĥŚěĲÝĂōďųŮğŖ¹ŨļŏĬÏŸŗâ¦¾ŋũ£ţ": //M
+				  case "ĬĥŚěĲÝĂōďųŮğŖ¹ÏŸŗğŖĦĴŀį¯ÀœÀņŢŴūĶŲĠşıćŽ·ųþŖĹý¼¹Ũļŏ°ŨļŏĬÏŸŗâ¦¾ŋũ£ţ": //M
+				  case "ğŖĦĴŀį·ųþŖĹý¼¹ŨļŏĬÏŸŗ°ĥŚěĲÝĂō¯ÀœÀņŢŴūĶŲĠşı¦¾ŋũ£ţćŽďųŮğŖ¹ŨļŏĬÏŸŗâ": //s
+					break;	
 				  default:
 				    breakout = 1;
 				}
@@ -282,14 +308,17 @@ function quote(act, chr, length) {
 			  var str = ddlcarray[0][tempact][quoteno];
 			  var res = str.charAt(0);
 			  if (res == "S") { 
-			    if (randact == 1) {
-					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
-					{
-						breakout = 1;
-					}
-					else
-					{
+			    if (randact == 1) {	
+					switch (ddlcarray[0][tempact][quoteno].substr(2)) {
+					  case "Sorry, I'm not in this act...":
+					  case "Ĺý¼¹ŨļŏĬÏŸŗ°ĥŚěĲÝĂō¯ÀœÀņŢŴūĶŲĠşı¦¾ŋũ´À¥¸¢ĢļĎźũÝĸŌŞţëġŁŐÂÉĤĐ·ċ": 		//s
+					  case "ÔŭÐŠÒĝĒåŹóÑÿŖĦºūůŜ¤ÍŝŽÛìĎũ½ÅµþĞÎŴġäĭ³®ŭÒ§ĵů£ţćŽďųŮğŖĦĴŀį·ųþğâ":			//s
+					  case "ÕóŊ¦ªĘąŷÞÈÿûůœŅŐÁ°¼Ġ¯ÊŋÁ¹Ŏ·£èğČŦĴ³Ðå¢ŞħźšŎŤëÈĉ°±ĻéĀõ÷Àľć¤¦čĮĦ":			//s
+					  case "ğŖĦĴŀį·ųþŖĹý¼¹ŨļŏĬÏŸŗ°ĥŚěĲÝĂō¯ÀœÀņŢŴūĶŲĠşı¦¾ŋũ£ţćŽďųŮğŖ¹ŨļŏĬÏŸŗâ":      //s
 						tempact = "act1";
+						break;	
+					  default:
+						breakout = 1;
 					}
 				}
 				else {
@@ -309,13 +338,15 @@ function quote(act, chr, length) {
 			  var res = str.charAt(0);
 			  if (res == "Y") { 
 			    if (randact == 1) {
-					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
-					{
-						breakout = 1;
-					}
-					else
-					{
+					switch (ddlcarray[0][tempact][quoteno].substr(2)) {
+					  case "Sorry, I'm not in this act...":				 
+					  case "ýĹğŖþŀ£ŢįâĴŚŖŨţųŋıŨŽņÀďŸÀ¦ćěĬļ¾ş°ŮŏŲō¹ĬļÏųĲŸūĠŗŖ·ŴĦĂÏŗũŏ¼¹ğœĶÝ¯ĥ": //y
+					  case "ō·ļĲ¼Ġ¯ŸļŮŢćĬğŨŗŋŗœŴũĶŖņŲŚŖÏŀŨūýĂų¾Ýď¹ĬÏŏþĥŸěŽųğĦĴÀ£â°Ŗį¹ş¦ÀţĹıŏ": //y
+					  case "ŏŽ¦ŀĥųūųĲŗŲŸļŨŴŖŗŨŏĂũş·ŖœŋļņğŸ¼ćĬ¹ě£ÀÀĹį¹ÏĬýōĶ¯ŖğâĦĠÝÏţŚþďı¾°ŢĴŮ": //y
 						tempact = "act1";
+						break;	
+					  default:
+						breakout = 1;
 					}
 				}
 				else {
@@ -335,13 +366,29 @@ function quote(act, chr, length) {
 			  var res = str.charAt(0);
 			  if (res == "N") { 
 			    if (randact == 1) {
-					if (ddlcarray[0][tempact][quoteno].substr(2) != "Sorry, I'm not in this act...") 
-					{
-						breakout = 1;
-					}
-					else
-					{
+					switch (ddlcarray[0][tempact][quoteno].substr(2)) {
+					  case "Sorry, I'm not in this act...":				 
+					  case "£ŨşğŗōŖýũ¾ŨĥŋćÝÏţĂįŖěŏ¯¦ĶļņŸďÀųğŢþŴĬ·ļ¹ŚÀĴœųŖŮūĦŲŗ°ŽĬıŀĠĹŸŏ¹¼âÏĲ":  //n
+					  case "þūĶ¦ŏļÏŚŗÝœÏ¹ŖćĥĴŨĬŮĲōįŲ¯ıŀŗŨŸŖ¾ţļņğýŸ·ŢĬŋĠğě¹Ŵũųâ°ųďŽŏŖ¼şĹĦÀĂ£À":  //n
+					  case "T3BlbiBZb3VyIFRoaXJkIEV5ZQ==":			//n
+					  case "SSBjYW4gZmVlbCB0aGUgdGVuZGVybmVz":      //n
+					  case "cyBvZiBoZXIgc2tpbiB0aHJvdWdoIHRo":      //n
+					  case "ZSBrbmlmZSwgYXMgaWYgaXQgd2VyZSBh":      //n
+					  case "biBleHRlbnNpb24gb2YgbXkgc2Vuc2Ug":      //n
+					  case "b2YgdG91Y2guIE15IGJvZHkgbmVhcmx5":      //n
+					  case "IGNvbnZ1bHNlcy4gVGhlcmUncyBzb21l":      //n
+					  case "dGhpbmcgaW5jcmVkaWJseSBmYWludCwg":      //n
+					  case "ZGVlcCBkb3duLCB0aGF0IHNjcmVhbXMg":      //n
+					  case "dG8gcmVzaXN0IHRoaXMgdW5jb250cm9s":      //n
+					  case "bGFibGUgcGxlYXN1cmUuIEJ1dCBJIGNh":      //n
+					  case "biBhbHJlYWR5IHRlbGwgdGhhdCBJJ20g":      //n
+					  case "YmVpbmcgcHVzaGVkIG92ZXIgdGhlIGVk":      //n
+					  case "Z2UuIEkgY2FuJ3QuLi5JIGNhbid0IHN0":      //n
+					  case "b3AgbXlzZWxmLg==":                      //n
 						tempact = "act1";
+						break;	
+					  default:
+						breakout = 1;
 					}
 				}
 				else {
@@ -360,7 +407,19 @@ function quote(act, chr, length) {
 			  var str = ddlcarray[0][tempact][quoteno];
 			  var res = str.charAt(0);
 			  if (res == "M") { 
+				if (randact == 1) {
+					switch (ddlcarray[0][tempact][quoteno].substr(2)) {	 
+					  case "ĬÏŸŗğŖĦĴŀį¯ÀœÀņŢŴūĶŲĠşıćŽ·ųþŖĹý¼¹Ũļŏ°ĥŚěĲÝĂōďųŮğŖ¹ŨļŏĬÏŸŗâ¦¾ŋũ£ţ": //M
+					  case "ĬĥŚěĲÝĂōďųŮğŖ¹ÏŸŗğŖĦĴŀį¯ÀœÀņŢŴūĶŲĠşıćŽ·ųþŖĹý¼¹Ũļŏ°ŨļŏĬÏŸŗâ¦¾ŋũ£ţ": //M
+						tempact = "act1";
+						break;	
+					  default:
+						breakout = 1;
+					}
+				}
+				else {
 				breakout = 1
+				}
 			  };
 			}
 			while (breakout < 1);
@@ -424,7 +483,19 @@ function quote(act, chr, length) {
 			  var str = ddlcarray[0][tempact][quoteno];
 			  var res = str.charAt(0);
 			  if (res == "-") { 
-			    breakout = 1
+				if (randact == 1) {
+					if (ddlcarray[0][tempact][quoteno].substr(2) != "Ï¹ÀŏŚÀýĶŖþğŨÝŋįěğĴ·ųŗŏ¯ŮņĬÏĥŗŲĲţōŢŸćŴâũĦŖœļŽĬŨŸ¾ŀşĠĂı¼¹ĹŖū°ļų¦ď£") 
+					{
+						breakout = 1;
+					}
+					else
+					{
+						tempact = "act1";
+					}
+				}
+				else {
+				breakout = 1
+				}
 			  };
 			}
 			while (breakout < 1);
