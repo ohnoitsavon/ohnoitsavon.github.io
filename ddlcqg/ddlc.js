@@ -91,7 +91,8 @@ $.getJSON("ddlc.json", function(data) {
 		var a = document.getElementById("aboutDDLC");
 		a.onclick = function(){
 			document.getElementById("bg").className = "cutopacity";
-			$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname ddlcERRORname\">About:</span><br><span class=\"ddlctext ddlcJUSTtext\">Hi, welcome to the DDLC Quote Generator! - created by <a href=\"https://www.ohnoitsAvon.co.uk\" target=\"_blank\">ohnoitsAvon</a><br><br>This website lets you generate random quotes from DDLC. It also lets you search for your favourite quotes.<br><br>With this tool you can:<br><br>Generate random quotes<br>Get the next quote (in order)<br>Search for quotes by Character, word or phrase<br>Choose the act to get quotes from<br>Change the name of the MC<br>Turn on or off custom colours<br>Enable or disable automatic text alignment.<br><br>Searching for the character names will display quotes from the chosen character:<br>Sayori, Natsuki, Yuri, Monika, MC,<br>or TXT for the narrator text.<br><br>If you would like to search for a quote that mentions the character add a / before the name:<br>e.g. /Monika<br><br>This is a Doki Doki Literature Club fan made utility that is not affiliated with Team Salvato.<br>It is designed to be used only after the official game has been completed.<br>You can download Doki Doki Literature Club at: <a href=\"http://ddlc.moe\" target=\"_blank\">http://ddlc.moe</a><br><br>Click \"Random Quote\" to get started.</span></p>")
+			$("#ddlc").append("<p class=\"textc\"><span class=\"ddlcname ddlcERRORname\">About:</span><br><span class=\"ddlctext ddlcJUSTtext\">Hi, welcome to the DDLC Quote Generator! - created by <a href=\"https://www.ohnoitsAvon.co.uk\" target=\"_blank\">ohnoitsAvon</a><br><br>This website lets you generate random quotes from DDLC. It also lets you search for your favourite quotes.<br><br>With this tool you can:<br><br>Generate random quotes<br>Get the next quote (in order)<br>Search for quotes by Character, word or phrase<br>Choose the act to get quotes from<br>Change the name of the MC<br>Turn on or off custom colours<br>Enable or disable automatic text alignment.<br><br>Searching for the character names will display quotes from the chosen character:<br>Sayori, Natsuki, Yuri, Monika, MC,<br>or TXT for the narrator text.<br><br>If you would like to search for a quote that mentions the character add a / before the name:<br>e.g. /Monika<br><br>Adding a / before other search terms allows you to search within words: e.g. searching for \"lit\" will return no results but searching for \"/lit\" will return literature, little etc.<br><br>This is a Doki Doki Literature Club fan made utility that is not affiliated with Team Salvato.<br>It is designed to be used only after the official game has been completed.<br>You can download Doki Doki Literature Club at: <a href=\"http://ddlc.moe\" target=\"_blank\">http://ddlc.moe</a><br><br>Click \"Random Quote\" to get started.</span></p>")
+			window.scrollTo(0,document.body.scrollHeight);
 			return false;
 		}
 			
@@ -528,9 +529,14 @@ function quote(act, chr, length) {
 function searchquote(chr,searchact) {	
 	
 	upsearch = chr.toUpperCase();
-	var regtext = new RegExp(/[^A-Za-z0-9 ÉÀ]/g);
-	upsearch = upsearch.replace(regtext,"");	
+	if (upsearch.charAt(0) != "/")
+	{
+		upsearch = "/ " + upsearch;
+		upsearch = upsearch + "/ /";
+	}
 	
+	var regtext = new RegExp(/[^A-Za-z0-9 ÉÀ]/g);
+	upsearch = upsearch.replace(regtext,"");
 	for (j = 0; j < ddlcarray[0][searchact].length; j++) 
 	{
 		tempstr = ddlcarray[0][searchact][j].toUpperCase();
