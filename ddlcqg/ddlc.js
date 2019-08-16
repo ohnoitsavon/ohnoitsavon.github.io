@@ -206,7 +206,6 @@ function quote(act, chr, length) {
 			case "act2":
 			case "act3":
 			case "act4":
-			case "EEDISCORD":
 			break;
 			default:
 				lastact = "act1";
@@ -664,19 +663,12 @@ function searchquote(chr,searchact) {
 			searcharray.push(["EEAB",j]);		
 			}
 		break;
-		case (upsearch == "CEASER"):
+		case (upsearch.includes("CEASER")):
 			for (j = 0; j < ddlcarray[0]["EEC"].length; j++) 
 			{
 			searcharray.push(["EEC",j]);		
 			}
-		break;
-		case (upsearch == "CEASER MADRAZO DISCORD"):
-			for (j = 0; j < ddlcarray[0]["EEAB"].length; j++) 
-			{
-			searcharray.push(["EEDISCORD",j]);	
-			}
-		break;
-		
+		break;		
 		
 	}
 	
@@ -767,14 +759,6 @@ function typequote(choiceact, qn){
 			{
 				namestyle = "ddlcBname";
 				textstyle = "ddlcBtext";
-			}
-			break;
-		  case "R":
-			name = "xRakanHD"
-			if (chartextcols == 1)
-			{
-				namestyle = "ddlcclassicname";
-				textstyle = "ddlcclassictext";
 			}
 			break;
 				
