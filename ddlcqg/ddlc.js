@@ -613,6 +613,7 @@ function searchquote(chr,searchact) {
 		var reg = new RegExp(/(<([^>]+)>)/g);
 		tempstr = tempstr.replace(reg,"");
 		tempstr = tempstr.replace(regtext,"");	
+		tempstr = tempstr+" ";
 		if (tempstr.includes(upsearch))
 		{
 			switch (ddlcarray[0][searchact][j].substr(2)) {
