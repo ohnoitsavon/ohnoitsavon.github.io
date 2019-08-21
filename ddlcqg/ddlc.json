@@ -10978,7 +10978,6 @@
 			"Z We dont speak together in this act!"
 			],
 			"act4": [
-			"Z We dont speak together in this act!",
 			"M Please stop playing with my heart. I don't want to come back.",
 			"- It's an ordinary school day, like any other.",
 			"- As usual, I'm surrounded by couples and friend groups walking to school together.",
@@ -11328,7 +11327,8 @@
 			"S What is this?",
 			"S What am I?",
 			"S Make it stop!",
-			"S PLEASE MAKE IT STOP!"			
+			"S PLEASE MAKE IT STOP!",
+			"Z We dont speak together in this act!"			
 			],
 			"EENEP": [
 			"H Nep, Nep Nep Nep Nep Nep Nep, Nep Nep.",
