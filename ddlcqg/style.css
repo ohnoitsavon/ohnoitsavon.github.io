@@ -191,6 +191,27 @@ b {
     cursor: pointer;
     background: #ffe6f4;
     border-color: #ffbde1;
+    
+}
+
+.menubtn {
+    margin: 0 10px 0px 10px;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    border-style: solid solid none solid;
+    box-shadow: 0 -8px 8px 0 rgba(0, 0, 0, 0.2), 0 -20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active{
+    background: #ffe6f4;
+    border-color: #ffbde1;
+}
+
+#menu {
+    max-width: 1000px;
+	margin: 0 auto 0 auto;
+	width:95%;
 }
 
 #ddlc
