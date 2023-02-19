@@ -1,33 +1,67 @@
 {
    "data": [
-	  {
-      	 "image": "images/covers/idk.jpg",
-         "name": "I Don't Know EP",
-         "date": "October 2, 2013",
-         "col": "#ff9900",
-         "bclink": "",
-         "splink": "",
-         "itlink": "",
-         "gplink": "",
-         "sclink": "https://soundcloud.com/ohnoitsavon/sets/i-dont-know-ep",
-         "rvlink": "https://www.reverbnation.com/3033231/album/174667",
-         "tracks": [
-         	{
-         		"tname": "A Song About Me​"
-         	},
-			{
-         		"tname": " Keep Calm And Watch Out"
-         	},
-			{
-         		"tname": "IDK​"
-         	},
-			{
-         		"tname": "Why I Shouldn't Write A Song About You"
-         	},
-         	{
-         		"tname": "IDK (Acoustic)"
-         	}
-         ]
-      }
+		{
+			"image": "images/covers/asongaboutme.jpg",
+			"name": "A Song About Me",
+			"date": "September 10, 2020",
+			"col": "#ff9900",
+			"bclink": "https://ohnoitsavon.bandcamp.com/track/a-song-about-me",
+			"splink": "",
+			"itlink": "",
+			"gplink": "",
+			"sclink": "",
+			"rvlink": "",
+			"tracks": [
+				{
+					"tname": "A Song About Me​"
+				}
+			]
+   		},
+		{
+			"image": "images/covers/repeat.jpg",
+			"name": "Repeat",
+			"date": "September 10, 2020 ",
+			"col": "#ff9900",
+			"bclink": "https://ohnoitsavon.bandcamp.com/track/repeat",
+			"splink": "",
+			"itlink": "",
+			"gplink": "",
+			"sclink": "",
+			"rvlink": "",
+			"tracks": [
+				{
+					"tname": "Repeat​"
+				}
+			]
+		},
+	  	{
+			"image": "images/covers/idk.jpg",
+			"name": "I Don't Know EP",
+			"date": "October 2, 2013",
+			"col": "#ff9900",
+			"bclink": "",
+			"splink": "",
+			"itlink": "",
+			"gplink": "",
+			"sclink": "https://soundcloud.com/ohnoitsavon/sets/i-dont-know-ep",
+			"rvlink": "https://www.reverbnation.com/3033231/album/174667",
+			"tracks": [
+				{
+					"tname": "A Song About Me​"
+				},
+				{
+					"tname": " Keep Calm And Watch Out"
+				},
+				{
+					"tname": "IDK​"
+				},
+				{
+					"tname": "Why I Shouldn't Write A Song About You"
+				},
+				{
+					"tname": "IDK (Acoustic)"
+				}
+			]
+		}
    ]
 }
