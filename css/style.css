@@ -616,12 +616,7 @@ h2{
 	color:#000;
 }
 
-.burger-nav .social
-{
-	padding-right:30px;
-}
-
-@media screen and (max-height :600px){
+@media screen and (max-height :570px){
 	.burger-nav ul li a
 	{
 		font-size:40px;
@@ -632,7 +627,7 @@ h2{
 	}
 }
 
-@media screen and (max-height :500px){
+@media screen and (max-height :485px){
 	.burger-nav ul li a
 	{
 		font-size:30px;
@@ -643,7 +638,7 @@ h2{
 	}
 }
 
-@media screen and (max-height :420px){
+@media screen and (max-height :400px){
 	.burger-nav ul li
 	{
 		display: inline-block;
