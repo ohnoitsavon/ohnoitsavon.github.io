@@ -1,5 +1,5 @@
 var musicSwitch = 1; 
-var imgCutpointsMusic = 4;
+var imgCutpointsMusic = 6;
 var imgCountMusic = 0;
 var totalMusicCount = 0;
 
@@ -124,30 +124,15 @@ $.getJSON("music.json", function(data) {
 		abtracks = "";
 		
 		if (abmusicarray[position].bclink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].bclink+"\"><img src=\"images/logos/bandc2.png\"/></a></div>";
+			ablinks = ablinks + "<div class=\"ablinks\"><a class=\"bandcamp\" target=\"_blank\" href=\""+abmusicarray[position].bclink+"\"><i class=\"fa-brands fa-bandcamp\"></i><span>Bandcamp</span></a></div>";
 		}
 		
 		if (abmusicarray[position].splink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].splink+"\"><img src=\"images/logos/spotify2.png\"/></a></div>";
+			ablinks = ablinks + "<div class=\"ablinks\"><a class=\"spotify\" target=\"_blank\" href=\""+abmusicarray[position].splink+"\"><i class=\"fa-brands fa-spotify\"></i><span>Spotify</span></a></div>";
 		}
-		
-		 if (abmusicarray[position].itlink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].itlink+"\"><img src=\"images/logos/itunes.png\"/></a></div>";
-		}
-		
-		if (abmusicarray[position].gplink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].gplink+"\"><img src=\"images/logos/gplay.png\"/></a></div>";
-		}
-		
-		
-		if (abmusicarray[position].sclink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].sclink+"\"><img src=\"images/logos/sc.png\"/></a></div>";
-		}
-		
-		if (abmusicarray[position].rvlink != "") {
-			ablinks = ablinks + "<div class=\"ablinks\"><a target=\"_blank\" href=\""+abmusicarray[position].rvlink+"\"><img src=\"images/logos/rv.png\"/></a></div>";
-		}	
-			
+		if (abmusicarray[position].amlink != "") {
+			ablinks = ablinks + "<div class=\"ablinks\"><a class=\"applemusic\" target=\"_blank\" href=\""+abmusicarray[position].amlink+"\"><i class=\"fa-brands fa-itunes\"></i><span>Apple Music</span></a></div>";
+		}			
 		
 		for (i = 1; i <= abmusicarray[position].tracks.length; i++) { 
 			console.log(abmusicarray[position].tracks[i-1])

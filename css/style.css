@@ -116,36 +116,25 @@ h2{
 }
 
 #inner-top{
-	margin:0% auto 63% auto;
-	height:0;
+	background:rgba(0,0,0,0.4);
+	height:Auto;
 }
 
 #top-banner{
-	width:40%;
-	height:3000px;
-	padding:4% 30% 0 30%;
-	/*background:rgba(0,0,0,0.4);
-	background: -moz-linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 20%);
-	background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 20%);
-	background: -o-linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 20%);
-	background: -ms-linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 20%);
-	background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 20%);*/	
-	margin: 0px auto auto 0;
-	
+	padding: 2% 30% 0 30%;
+	width:40%
 }
 
 #sub-banner{
 	width:100%;
-	height:0px;
-	padding:35% 0 0 0;
-	margin: -3000px auto auto auto;
-	
+	height:Auto;
+	margin-top:-50px;
+	padding: 0 0 5% 0;
 }
 
 #menu-wrap{
 	width:100%;
 	text-align: center;
-	height:3000px;
 }
 
 #menu-wrap a{
@@ -172,7 +161,7 @@ h2{
 
 #menu-wrap a.twi:hover{
 	opacity: 1;
-	color: #55acee;
+	color: #fff;
 }
 
 #menu-wrap a.fbi:hover{
@@ -183,31 +172,20 @@ h2{
 
 @media screen and (max-width :800px){
 #top-page {
-    background:url('../images/bg2.jpg') no-repeat bottom center;
+    background:url('../images/bg2.jpg') no-repeat top center;
 		background-size: 100% auto;
     width:100%;
 	overflow:hidden;
 }
 
-#inner-top{
-	margin:0% auto 125% auto;
-	height:0;
-}
-
 #top-banner{
-	width:84%;
-	height:3000px;
-	padding:8% 8% 0 8%;
-	
+	padding: 10% 10% 0 10%;
+	width:80%	
 }
 
-#sub-banner{
-	padding:0 0 0 0;
-	
-}
 
-#menu-wrap {		
-	padding-top: 65%;
+#sub-banner {		
+	padding-bottom: 15%;
 }
 
 #menu-wrap a{
@@ -218,32 +196,10 @@ h2{
 
 @media screen and (max-width :466px){
 #top-page {
-    background:url('../images/bg3.jpg') no-repeat bottom center;
+    background:url('../images/bg3.jpg') no-repeat top center;
 		background-size: 100% auto;
     width:100%;
 	overflow:hidden;
-}
-
-
-#inner-top{
-	margin:0% auto 160% auto;
-	height:0;
-}
-
-#top-banner{
-	width:92%;
-	height:3000px;
-	padding:20% 4% 0 4%;
-	
-}
-
-#sub-banner{
-	padding:30% 0 0 0;
-	
-}
-
-#menu-wrap {		
-	padding-top: 45%;
 }
 
 #menu-wrap a{
@@ -289,8 +245,8 @@ h2{
 .linkshift
 {
 	display:block;
-	height:41px; /* fixed header height*/
-	margin:-41px 0 0; /* negative fixed header height */
+	height:61px; /* fixed header height*/
+	margin:-61px 0 0; /* negative fixed header height */
 }
 
 #AboutC div
@@ -473,7 +429,7 @@ h2{
 
 #footer a.twi:hover{
 	opacity: 1;
-	color: #55acee;
+	color: #ddd;
 }
 
 #footer a.fbi:hover{
@@ -482,24 +438,25 @@ h2{
 }
 
 
-.btmLrg, .btmLrg1
+.btnLrg
 {
 	font-size:150%;
-	padding: 30px 20px 50px 20px;
-
+	margin:5px;
+	padding: 20px 0 20px 0;
 }
 
-.btmLrg1 a
+.btnLrg a
 {
 	padding: 5px 10px;
 	border: solid 2px;
+	border-radius: 10px;
 	color: #fff;
+	text-decoration: none;
 }
 
-.btmLrg1 a:hover{
+.btnLrg a:hover{
 	color: #ff9900;
 }
-
 
 .mobilemenu
 {
@@ -542,23 +499,23 @@ h2{
 	display:none;
 }
 
-.rotate-menu
+.scale-menu
 {
-	-ms-transform: rotate(360deg) scale(0.1); /* IE 9 */
-	-webkit-transform: rotate(360deg) scale(0.1); /* Chrome, Safari, Opera */
-	-moz-transform: rotate(360deg) scale(0.1); /* Chrome, Safari, Opera */ 
-	-o-transform: rotate(360deg) scale(0.1); /* Chrome, Safari, Opera */
-	transform: rotate(360deg) scale(0.1);
+	-ms-transform: scale(0.1); /* IE 9 */
+	-webkit-transform: scale(0.1); /* Chrome, Safari, Opera */
+	-moz-transform: scale(0.1); /* Chrome, Safari, Opera */ 
+	-o-transform: scale(0.1); /* Chrome, Safari, Opera */
+	transform: scale(0.1);
 	opacity: 0;
 }
 
-.rotate-close
+.scale-close
 {
-	-ms-transform: rotate(0deg) scale(1); /* IE 9 */
-	-webkit-transform: rotate(0deg) scale(1); /* Chrome, Safari, Opera */
-	-moz-transform: rotate(0deg) scale(1); /* Chrome, Safari, Opera */ 
-	-o-transform: rotate(0deg) scale(1); /* Chrome, Safari, Opera */
-	transform: rotate(0deg) scale(1);
+	-ms-transform: scale(1); /* IE 9 */
+	-webkit-transform: scale(1); /* Chrome, Safari, Opera */
+	-moz-transform: scale(1); /* Chrome, Safari, Opera */ 
+	-o-transform: scale(1); /* Chrome, Safari, Opera */
+	transform: scale(1);
 	opacity: 1;
 }
 
@@ -663,21 +620,4 @@ h2{
 .screenfixmenu
 {
 	display:block;
-}
-
-
-.iesocial {
-	
-	width:auto;
-	margin: 0 auto 0 auto;
-	text-align:center;
-}
-
-.iesocial li
-{
-	width:160px;
-	display:inline-block;
-	font-size:160%;
-	font-weight:bold;
-	text-align:center;
 }

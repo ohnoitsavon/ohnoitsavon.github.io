@@ -1,7 +1,7 @@
 {
    "data": [
       {
-         "loc": "../images/abimg/01.png"
+         "loc": "../images/abimg/01.jpg"
       },
       {
          "loc": "../images/abimg/02.jpg"
@@ -26,15 +26,6 @@
       },
       {
          "loc": "../images/abimg/09.jpg"
-      },
-      {
-         "loc": "../images/abimg/10.jpg"
-      },
-      {
-         "loc": "../images/abimg/11.jpg"
-      },
-      {
-         "loc": "../images/abimg/12.jpg"
       }
    ]
 }
