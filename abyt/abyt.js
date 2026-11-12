@@ -141,11 +141,11 @@
 							dDate = aDate.join(' ');
 						
 							if (i4 == 0) {
-								htmltext = htmltext + '<div class="abyt-main"><div class="abyt-vid"><iframe width="560" height="315" src="https://www.youtube.com/embed/' + vidarray[i4][0] + '?list=' + o.plId + '" frameborder="0" allowfullscreen></iframe></div><span class="abyt-info"><span class="abyt-title">' + vidarray[i4][3] +'</span><br><span class="abyt-views" style="color:' + o.accent_col + '";>' + vidarray[i4][2] +' VIEWS</span><span class="abyt-gap"> | </span><span class="abyt-date" style="color:' + o.accent_col + '";>' + dDate +'</span></span></div>';
+								htmltext = htmltext + '<div class="abyt-main"><div class="abyt-vid"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + vidarray[i4][0] + '?list=' + o.plId + '" frameborder="0" allowfullscreen></iframe></div><span class="abyt-info"><span class="abyt-title">' + vidarray[i4][3] +'</span><br><span class="abyt-views" style="color:' + o.accent_col + '";>' + vidarray[i4][2] +' VIEWS</span><span class="abyt-gap"> | </span><span class="abyt-date" style="color:' + o.accent_col + '";>' + dDate +'</span></span></div>';
 								htmltext = htmltext + '<div class="abyt-side">';
 							} else {
 								
-								htmltext = htmltext + '<div class="abyt-siderow"><div class="abyt-swrap"><div class="abyt-vid"><a target="_blank" href="https://www.youtube.com/watch?v=' + vidarray[i4][0] + '&list=' + o.plId + '"><img style="width:100%;" src="' + vidarray[i4][4] + '" alt="' + vidarray[i4][3] + '" /><div class="after"></div></a></div></div><div class="abyt-sub"><span class="abyt-info"><span class="abyt-title">' + vidarray[i4][3] +'</span><br><span class="abyt-views"  style="color:' + o.accent_col + '";>' + vidarray[i4][2] +' VIEWS</span><span class="abyt-gap"> | </span><span class="abyt-date" style="color:' + o.accent_col + '";>' + dDate +'</span></span></div></div>';
+								htmltext = htmltext + '<div class="abyt-siderow"><div class="abyt-swrap"><div class="abyt-vid"><a target="_blank" href="https://www.youtube-nocookie.com/watch?v=' + vidarray[i4][0] + '&list=' + o.plId + '"><img style="width:100%;" src="' + vidarray[i4][4] + '" alt="' + vidarray[i4][3] + '" /><div class="after"></div></a></div></div><div class="abyt-sub"><span class="abyt-info"><span class="abyt-title">' + vidarray[i4][3] +'</span><br><span class="abyt-views"  style="color:' + o.accent_col + '";>' + vidarray[i4][2] +' VIEWS</span><span class="abyt-gap"> | </span><span class="abyt-date" style="color:' + o.accent_col + '";>' + dDate +'</span></span></div></div>';
 							}
 
 						})	
